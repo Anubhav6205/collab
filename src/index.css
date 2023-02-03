@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cardmys:hover{
+  transform: scale(1.05);
+  transition:ease-in-out;
+  transition-duration: 300ms;
+  box-shadow: 0 10px 20px rgba(0,0,0,.8), 0 4px 8px rgba(0,0,0,1);
+}
+#mystery{
+  display:none;
+}

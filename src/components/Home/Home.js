@@ -1,40 +1,50 @@
 import React, { useState } from "react";
 import HomeRender from "./HomeRender";
-
+import photo1 from "./music.jpg"
+import photo2 from "./pikrepo.jpg"
+import photo3 from "./pikrepo(1).jpg"
+import photo4 from "./pikrepo(2).jpg"
+import photo5 from "./pikrepo(4).jpg"
+import Login from "../Login/Login";
 export default function Home() {
   const [data, setData] = useState([
     {
-      photo: "./music.jpg",
+      photo: photo1,
       title: "Zeena",
-      key: "Zeena1",
+      key: 1,
     },
     {
-      photo: "./music.jpg",
+      photo: photo2,
       title: "Marna",
-      key: "Zeena2",
+      key: 2,
     },
     {
-      photo: "./music.jpg",
+      photo: photo3,
       title: "Wow",
-      key: "Zeena3",
+      key: 3,
     },
     {
-      photo: "./music.jpg",
+      photo: photo4,
       title: "How",
-      key: "Zeena4",
+      key: 4,
     },
     {
-      photo: "./music.jpg",
+      photo: photo5,
       title: "Yes",
-      key: "Zeena5",
+      key: 5,
     },
   ]);
-  const music = (index, item) => {
+  const music = (item) => {
     return <HomeRender key={item.key} item={item} />;
   };
   return (
+    <div>
+    <div>
+    <Login/>
+    </div>
     <div className="container mt-4">
-      <div className="row row-cols-1 row-cols-md-2 g-4">{data.map(music)}</div>
+      <div className="row row-cols-1 row-cols-md-2 g-4" style={{zIndex:"1"}}>{data.map(music)}</div>
+    </div>
     </div>
   );
 }

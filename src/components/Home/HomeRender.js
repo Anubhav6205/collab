@@ -1,24 +1,41 @@
-import React from 'react'
-
+import React from "react";
+import "./music.jpg";
 export default function HomeRender(props) {
-    const play=()=>{
-
-    }
+  const play = () => {
+    let a = document.getElementById(`mystery${props.item.key}`)
+    a.style.visibility="visible"
+    a.style.boxShadow="0 10px 20px rgba(0,0,0,0.8), 0 4px 8px rgba(255,255,255,1)"
+  };
+  const play2=()=>{
+    let a = document.getElementById(`mystery${props.item.key}`)
+    a.style.visibility="hidden"
+  }
   return (
-    <div className="card mx-4" style={{backgroundImage:`url(${props.item.photo})`,width:"18rem"}}>
-    <div className="card-body">
-      <h5 className="card-title">{props.item.title}</h5>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-        fill="currentColor"
-        className="bi bi-play"
-        viewBox="0 0 16 16"
-      >
-        <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
-      </svg>
+    <div
+      className="card mx-4 cardmys"
+      style={{
+        backgroundImage: `url('${props.item.photo}')`,
+        width: "20rem",
+        height: "15rem",
+        backgroundSize: "25rem 15rem",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "5%",
+        position:"relative"}}
+    >
+      <div className="card-body inside" onMouseOver={play} onMouseOut={play2}>
+        <h5 className="card-title" style={{color:"white"}}>{props.item.title}</h5>
+        <button id={`mystery${props.item.key}`} style={{borderColor:"rgb(255,84,5)",borderRadius:"50%",position:"absolute",bottom:"40px",right:"20px",visibility:"hidden", backgroundColor:"rgb(255,84,5)"}}><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="50"
+          fill="black"
+          className="bi bi-play-fill mx-2 my-2"
+          viewBox="0 0 16 16"
+        >
+          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+        </svg>
+        </button>
+      </div>
     </div>
-  </div>
-  )
+  );
 }
