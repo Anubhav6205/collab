@@ -1,15 +1,21 @@
 //log in
 import "./Login.css";
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 
 
 export default function Login() {
   let url = ""; // url for forgot password anchor tag
+  let popupVisible = () => {
+    document.querySelector(".box").classList.add("pop-up");
+  };
 
   let popupRemove = () => {
     document.querySelector(".box").classList.remove("pop-up");
   };
+  setTimeout(popupVisible, 2000); // automatically pops up after 2000 millisec
+
   return (
     <>
       <div
@@ -20,7 +26,7 @@ export default function Login() {
           justifyContent: "center",
           height: "100vh",
           flexDirection: "column",
-          backgroundColor: "white"
+          backgroundColor: "transparent"
         }}
       >
         <div className="box">
@@ -82,6 +88,9 @@ export default function Login() {
             </div>
           </div>
         </div>
+    
+      
+    
       </div>
     </>
   );

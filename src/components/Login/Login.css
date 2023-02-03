@@ -2,9 +2,21 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 
    
 }
+
+.main{
+    position:absolute;
+    z-index: 1;
+    left: 0; 
+    right: 0; 
+    
+    
+
+}
+
 .box {
     background-color: #21252D;
     width: 950px;
@@ -15,9 +27,14 @@
     grid-template-columns: 1fr 2fr;
     overflow: hidden;
     background-size: cover;
-    /* visibility: hidden; */
+    visibility: hidden;
     transform: scale(.9);
     transition: .1s linear;
+   
+   
+
+
+
 }
 
 .pop-up {
