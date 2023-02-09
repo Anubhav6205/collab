@@ -4,7 +4,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 
-
 export default function Login() {
   let url = ""; // url for forgot password anchor tag
   let popupVisible = () => {
@@ -12,7 +11,9 @@ export default function Login() {
   };
 
   let popupRemove = () => {
-    document.querySelector(".box").classList.remove("pop-up");
+  
+    const main=document.querySelector(".main"); //removes the main class
+    main.remove();
   };
   setTimeout(popupVisible, 2000); // automatically pops up after 2000 millisec
 
@@ -26,7 +27,8 @@ export default function Login() {
           justifyContent: "center",
           height: "100vh",
           flexDirection: "column",
-          backgroundColor: "transparent"
+          
+      
         }}
       >
         <div className="box">

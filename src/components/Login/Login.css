@@ -12,6 +12,7 @@
     z-index: 1;
     left: 0; 
     right: 0; 
+    background-color: #373737b7;
     
     
 
@@ -30,6 +31,7 @@
     visibility: hidden;
     transform: scale(.9);
     transition: .1s linear;
+
    
    
 
