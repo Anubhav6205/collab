@@ -11,8 +11,7 @@ export default function Login() {
   };
 
   let popupRemove = () => {
-  
-    const main=document.querySelector(".main"); //removes the main class
+    const main = document.querySelector(".main"); //removes the main class
     main.remove();
   };
   setTimeout(popupVisible, 2000); // automatically pops up after 2000 millisec
@@ -26,9 +25,7 @@ export default function Login() {
           alignItems: "center",
           justifyContent: "center",
           height: "100vh",
-          flexDirection: "column",
-          
-      
+          flexDirection: "column"
         }}
       >
         <div className="box">
@@ -85,14 +82,11 @@ export default function Login() {
             <div className="sign-up-section">
               <h2>Don't have an account?</h2>
               <NavLink to="/signup">
-              <button className="sign-up-link">Sign up to Collab</button>
+                <button className="sign-up-link">Sign up to Collab</button>
               </NavLink>
             </div>
           </div>
         </div>
-    
-      
-    
       </div>
     </>
   );
